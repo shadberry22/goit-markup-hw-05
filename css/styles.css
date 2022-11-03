@@ -524,7 +524,7 @@ img {
 .portfolio-image-thumb {
   position: relative;
   overflow: hidden;
-}
+  }
 
 .portfolio-overlay {
   position: absolute;
