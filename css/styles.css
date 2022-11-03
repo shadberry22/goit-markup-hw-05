@@ -696,6 +696,7 @@ img {
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -731,7 +732,7 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  background: #ffffff;
+  background: transparent;
   cursor: pointer;
 }
 
