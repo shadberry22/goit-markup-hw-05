@@ -98,6 +98,8 @@ img {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -225,6 +227,8 @@ img {
   color: var(--main-white-color);
   background-color: var(--accent-color);
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -290,13 +294,13 @@ img {
 .activities-list {
   display: flex;
   flex-wrap: wrap;
-  
+
   gap: var(--main-gap);
 }
 
 .activities-item {
   position: relative;
-  
+
   width: calc((100% - 2 * var(--main-gap)) / 3);
 }
 
@@ -306,7 +310,7 @@ img {
 
   padding: 27px;
   width: 100%;
-  
+
   background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -388,6 +392,9 @@ img {
   border-radius: 50%;
   color: var(--icon-gray-color);
   background-color: var(--main-white-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {
@@ -434,6 +441,9 @@ img {
   justify-content: center;
   align-items: center;
 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   width: 100%;
   height: 100%;
   border: 1px solid var(--icon-gray-color);
@@ -475,6 +485,8 @@ img {
   color: var(--main-color);
   background-color: var(--background-light-color);
   cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -490,19 +502,60 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+
   margin-left: -30px;
   margin-top: -30px;
 }
 
 .portfolio-item {
-  flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+
+  flex-basis: calc(100% / 3 - 30px);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-image-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250 cubic-bezier(0.4, 0, 0.2, 1);
+  /* opacity: 0; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
+  /* opacity: 1; */
+}
+
+.portfolio-overlay-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: var(--main-white-color);
 }
 
 .portfolio-item-description {
@@ -573,6 +626,8 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-white-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link.contacts {
@@ -612,6 +667,8 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--main-white-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
